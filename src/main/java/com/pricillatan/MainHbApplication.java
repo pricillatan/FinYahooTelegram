@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import com.pricillatan.app.ECTSApp;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -24,11 +22,6 @@ public class MainHbApplication {
     public static void main(String[] args) {
         SpringApplication.run(MainHbApplication.class, args);
         
-
-        for(int i=0;i<100;i++) {
-        	ECTSApp mt = new ECTSApp("ECTS-"+i);
-            mt.start();
-        }  
     }
 
 
